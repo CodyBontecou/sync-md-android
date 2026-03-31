@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.services.git.DiffServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-31T11:49:00.453Z" hostname="CodyBontecoum1.local" time="0.511">
+<testsuite name="com.bontecou.syncmd.services.git.DiffServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-31T11:51:43.264Z" hostname="CodyBontecoum1.local" time="0.483">
   <properties/>
-  <testcase name="commit with message commits staged files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.088"/>
-  <testcase name="getStatus returns modified files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.085"/>
-  <testcase name="getStatus returns empty list for clean repository" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.086"/>
-  <testcase name="stageFile and unstageFile toggle file status" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.088"/>
+  <testcase name="commit with message commits staged files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.081"/>
+  <testcase name="getStatus returns modified files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.078"/>
+  <testcase name="getStatus returns empty list for clean repository" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.075"/>
+  <testcase name="stageFile and unstageFile toggle file status" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.084"/>
   <testcase name="getFileDiff returns diff for specific file" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.081"/>
-  <testcase name="stageAll stages all modified files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.082"/>
+  <testcase name="stageAll stages all modified files" classname="com.bontecou.syncmd.services.git.DiffServiceTest" time="0.084"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

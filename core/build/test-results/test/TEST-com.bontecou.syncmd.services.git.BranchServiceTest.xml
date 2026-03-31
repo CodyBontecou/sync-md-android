@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bontecou.syncmd.services.git.BranchServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-03-31T11:51:42.501Z" hostname="CodyBontecoum1.local" time="0.76">
+  <properties/>
+  <testcase name="getCurrentBranch returns HEAD branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.074"/>
+  <testcase name="listBranches returns all branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.073"/>
+  <testcase name="getLocalBranches returns only local branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.074"/>
+  <testcase name="merge with PREFER_FF strategy succeeds" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.076"/>
+  <testcase name="getDefaultBranch returns current branch name" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.073"/>
+  <testcase name="branchExists returns true for existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.079"/>
+  <testcase name="switchBranch fails when dirty" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.076"/>
+  <testcase name="branchExists returns false for non-existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.082"/>
+  <testcase name="deleteBranch removes branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.077"/>
+  <testcase name="createBranch and switch to new branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.075"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
