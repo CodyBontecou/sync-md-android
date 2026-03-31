@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:2:1-29:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /Users/codybontecou/.gradle/caches/8.14.4/transforms/94f7bee03567c0d6a2429b1a4a08fb60/transformed/hilt-navigation-compose-1.1.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.hilt:hilt-navigation:1.1.0] /Users/codybontecou/.gradle/caches/8.14.4/transforms/a0af572e9227b474f73b1146fde07744/transformed/hilt-navigation-1.1.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.5] /Users/codybontecou/.gradle/caches/8.14.4/transforms/223fe773f36542ae977066af7e53e87c/transformed/navigation-common-2.7.5/AndroidManifest.xml:17:1-22:12
@@ -103,8 +103,8 @@ ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:6:22-78
 application
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:8:5-26:19
-INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:8:5-26:19
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:8:5-27:19
+INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:8:5-27:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/codybontecou/.gradle/caches/8.14.4/transforms/25aa94800488fb3e2d7de86114c0af30/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/codybontecou/.gradle/caches/8.14.4/transforms/25aa94800488fb3e2d7de86114c0af30/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/codybontecou/.gradle/caches/8.14.4/transforms/9ae9d8ad7d5280e47a6402c41b67f41e/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -130,35 +130,37 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/codybontecou/.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/codybontecou/.gradle/caches/8.14.4/transforms/8f81e2cf382e0e07e53c8fe8280e01c9/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:12:9-54
 	android:allowBackup
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:14:9-44
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:15:9-44
 	android:dataExtractionRules
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:10:9-65
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:11:9-65
+	android:name
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:9:9-61
 activity#com.bontecou.syncmd.MainActivity
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:16:9-24:20
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:17:9-25:20
 	android:exported
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:18:13-36
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:19:13-36
 	android:theme
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:19:13-48
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:20:13-48
 	android:name
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:17:13-60
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:18:13-60
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:20:13-23:29
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:21:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml:23:27-74
 uses-sdk
 INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/codybontecou/dev/sync-md-android/app/src/main/AndroidManifest.xml

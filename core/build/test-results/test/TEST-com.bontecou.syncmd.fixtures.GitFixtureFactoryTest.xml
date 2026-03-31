@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-31T12:35:19.323Z" hostname="CodyBontecoum1.local" time="0.75">
+<testsuite name="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:09:55.157Z" hostname="CodyBontecoum1.local" time="0.929">
   <properties/>
-  <testcase name="createConflictedRepo has merge marker files" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.059"/>
-  <testcase name="multiple repos can be created without collision" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.18"/>
-  <testcase name="createCleanRepo repos are actually clean" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.061"/>
-  <testcase name="createDivergedRepo exists and has git directory" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.088"/>
-  <testcase name="createConflictedRepo exists and has git directory" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.061"/>
-  <testcase name="cleanup removes all created repos" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.118"/>
-  <testcase name="createCleanRepo returns valid repo path" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.06"/>
-  <testcase name="createDirtyRepo has uncommitted changes" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.062"/>
-  <testcase name="createDirtyRepo includes a test file" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.061"/>
+  <testcase name="createConflictedRepo has merge marker files" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.08"/>
+  <testcase name="multiple repos can be created without collision" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.219"/>
+  <testcase name="createCleanRepo repos are actually clean" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.073"/>
+  <testcase name="createDivergedRepo exists and has git directory" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.126"/>
+  <testcase name="createConflictedRepo exists and has git directory" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.075"/>
+  <testcase name="cleanup removes all created repos" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.143"/>
+  <testcase name="createCleanRepo returns valid repo path" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.07"/>
+  <testcase name="createDirtyRepo has uncommitted changes" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.068"/>
+  <testcase name="createDirtyRepo includes a test file" classname="com.bontecou.syncmd.fixtures.GitFixtureFactoryTest" time="0.075"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
