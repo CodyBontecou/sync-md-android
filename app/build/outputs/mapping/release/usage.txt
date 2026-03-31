@@ -6072,6 +6072,9 @@ com.bontecou.syncmd.di.ServiceModule:
 com.bontecou.syncmd.domain.repository.BranchRepository$DefaultImpls
 com.bontecou.syncmd.domain.repository.GitRepository
 com.bontecou.syncmd.domain.repository.HistoryRepository$DefaultImpls
+com.bontecou.syncmd.domain.repository.RemoteRepository$DefaultImpls
+com.bontecou.syncmd.domain.repository.RemoteRepository:
+    public abstract java.lang.Object updateRemoteUrl-BWLJW6A(java.lang.String,java.lang.String,java.lang.String,kotlin.coroutines.Continuation)
 com.bontecou.syncmd.ui.BottomNavItem:
     public static final int $stable
 com.bontecou.syncmd.ui.components.BranchListKt$BranchList$2$invoke$$inlined$items$default$2
@@ -16797,6 +16800,18 @@ com.bontecou.syncmd.MainActivity:
     static void <clinit>()
 com.bontecou.syncmd.SyncMdApplication:
     static void <clinit>()
+com.bontecou.syncmd.domain.repository.RemoteRepository:
+    public abstract java.lang.Object addRemote-BWLJW6A()
+    public abstract java.lang.Object fetch-0E7RQCE()
+    public abstract java.lang.Object getAheadBehindCounts()
+    public abstract java.lang.Object getRemoteUrl-0E7RQCE()
+    public abstract java.lang.Object getUpstreamTracking()
+    public abstract java.lang.Object listRemoteRefs-0E7RQCE()
+    public abstract java.lang.Object listRemotes-gIAlu-s()
+    public abstract java.lang.Object push-hUnOzRk()
+    public abstract java.lang.Object pushTags-0E7RQCE()
+    public abstract java.lang.Object remoteRefExists-BWLJW6A()
+    public abstract java.lang.Object removeRemote-0E7RQCE()
 com.bontecou.syncmd.ui.BottomNavItem:
     static void <clinit>()
 com.bontecou.syncmd.ui.screens.BranchScreenKt$BranchScreen$1:

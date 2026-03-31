@@ -1,4 +1,4 @@
-#Tue Mar 31 09:47:42 AST 2026
+#Tue Mar 31 11:04:04 AST 2026
 base.1=/Users/codybontecou/dev/sync-md-android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes2.dex
 path.1=classes2.dex
 base.0=/Users/codybontecou/dev/sync-md-android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
