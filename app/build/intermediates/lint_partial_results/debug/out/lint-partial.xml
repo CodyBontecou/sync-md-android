@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.bontecou.syncmd.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.string.commit_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="6"
+            column="13"
+            startOffset="202"
+            endLine="6"
+            endColumn="33"
+            endOffset="222"/>
+        <location id="R.string.status_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="108"
+            endLine="4"
+            endColumn="33"
+            endOffset="128"/>
+        <location id="R.string.branch_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="7"
+            column="13"
+            startOffset="251"
+            endLine="7"
+            endColumn="33"
+            endOffset="271"/>
+        <location id="R.string.staged"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="11"
+            column="13"
+            startOffset="446"
+            endLine="11"
+            endColumn="26"
+            endOffset="459"/>
+        <location id="R.string.modified"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="10"
+            column="13"
+            startOffset="400"
+            endLine="10"
+            endColumn="28"
+            endOffset="415"/>
+        <location id="R.string.stash_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="9"
+            column="13"
+            startOffset="353"
+            endLine="9"
+            endColumn="32"
+            endOffset="372"/>
+        <location id="R.string.untracked"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="12"
+            column="13"
+            startOffset="488"
+            endLine="12"
+            endColumn="29"
+            endOffset="504"/>
+        <location id="R.color.purple_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="29"
+            endOffset="79"/>
+        <location id="R.string.history_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="8"
+            column="13"
+            startOffset="302"
+            endLine="8"
+            endColumn="34"
+            endOffset="323"/>
+        <entry
+            name="model"
+            string="color[purple_200(D),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],string[branch_screen(D),staged(D),history_screen(D),app_name(U),commit_screen(D),status_screen(D),pull_screen(D),stash_screen(D),modified(D),untracked(D)],style[Theme_MaterialComponents_DayNight_DarkActionBar(R),Theme_SyncMd(U)],xml[data_extraction_rules(U),backup_rules(U)];12^11^6^5^2^4^3^1;;;"/>
+        <location id="R.string.pull_screen"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="5"
+            column="13"
+            startOffset="157"
+            endLine="5"
+            endColumn="31"
+            endOffset="175"/>
+    </map>
+
+</incidents>

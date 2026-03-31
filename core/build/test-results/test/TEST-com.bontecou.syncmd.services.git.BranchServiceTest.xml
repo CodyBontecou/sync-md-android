@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.services.git.BranchServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-03-31T12:27:02.616Z" hostname="CodyBontecoum1.local" time="0.729">
+<testsuite name="com.bontecou.syncmd.services.git.BranchServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-03-31T12:35:20.074Z" hostname="CodyBontecoum1.local" time="0.594">
   <properties/>
-  <testcase name="getCurrentBranch returns HEAD branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.077"/>
-  <testcase name="listBranches returns all branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.071"/>
-  <testcase name="getLocalBranches returns only local branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.074"/>
-  <testcase name="merge with PREFER_FF strategy succeeds" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.076"/>
-  <testcase name="getDefaultBranch returns current branch name" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.069"/>
-  <testcase name="branchExists returns true for existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.072"/>
-  <testcase name="switchBranch fails when dirty" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.071"/>
-  <testcase name="branchExists returns false for non-existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.071"/>
-  <testcase name="deleteBranch removes branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.073"/>
-  <testcase name="createBranch and switch to new branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.074"/>
+  <testcase name="getCurrentBranch returns HEAD branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.059"/>
+  <testcase name="listBranches returns all branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.061"/>
+  <testcase name="getLocalBranches returns only local branches" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.057"/>
+  <testcase name="merge with PREFER_FF strategy succeeds" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.061"/>
+  <testcase name="getDefaultBranch returns current branch name" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.058"/>
+  <testcase name="branchExists returns true for existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.059"/>
+  <testcase name="switchBranch fails when dirty" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.06"/>
+  <testcase name="branchExists returns false for non-existing branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.057"/>
+  <testcase name="deleteBranch removes branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.058"/>
+  <testcase name="createBranch and switch to new branch" classname="com.bontecou.syncmd.services.git.BranchServiceTest" time="0.061"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
