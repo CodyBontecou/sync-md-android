@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.services.git.ConflictServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:40:48.715Z" hostname="CodyBontecoum1.local" time="0.657">
+<testsuite name="com.bontecou.syncmd.services.git.ConflictServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:47:53.373Z" hostname="CodyBontecoum1.local" time="0.735">
   <properties/>
-  <testcase name="getConflicts returns empty list when no merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.056"/>
-  <testcase name="completeMerge finalizes after resolution" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.063"/>
-  <testcase name="getUnresolvedCount returns correct number" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.066"/>
-  <testcase name="getConflicts returns list during merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.063"/>
-  <testcase name="resolveConflict with THEIRS strategy works" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.054"/>
-  <testcase name="isMergeInProgress returns false when clean" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.054"/>
-  <testcase name="getMergeState returns no merge when not merging" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.056"/>
-  <testcase name="resolveInteractively with custom content works" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.063"/>
-  <testcase name="resolveAllConflicts with OURS strategy resolves all" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.06"/>
-  <testcase name="markAllResolved clears conflicts" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.058"/>
-  <testcase name="abortMerge cancels merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.063"/>
+  <testcase name="getConflicts returns empty list when no merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.066"/>
+  <testcase name="completeMerge finalizes after resolution" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.064"/>
+  <testcase name="getUnresolvedCount returns correct number" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.067"/>
+  <testcase name="getConflicts returns list during merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.071"/>
+  <testcase name="resolveConflict with THEIRS strategy works" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.069"/>
+  <testcase name="isMergeInProgress returns false when clean" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.065"/>
+  <testcase name="getMergeState returns no merge when not merging" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.067"/>
+  <testcase name="resolveInteractively with custom content works" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.07"/>
+  <testcase name="resolveAllConflicts with OURS strategy resolves all" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.063"/>
+  <testcase name="markAllResolved clears conflicts" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.065"/>
+  <testcase name="abortMerge cancels merge" classname="com.bontecou.syncmd.services.git.ConflictServiceTest" time="0.067"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

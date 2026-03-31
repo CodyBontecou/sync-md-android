@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.ProjectSetupTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:40:43.786Z" hostname="CodyBontecoum1.local" time="0.047">
+<testsuite name="com.bontecou.syncmd.ProjectSetupTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:47:48.055Z" hostname="CodyBontecoum1.local" time="0.036">
   <properties/>
-  <testcase name="truth assertions available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.009"/>
-  <testcase name="gson is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.021"/>
+  <testcase name="truth assertions available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.008"/>
+  <testcase name="gson is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.014"/>
   <testcase name="app version is accessible" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.0"/>
-  <testcase name="kotlin standard library is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.008"/>
+  <testcase name="kotlin standard library is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.009"/>
   <testcase name="core module builds successfully" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.0"/>
-  <testcase name="coroutines core is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.009"/>
+  <testcase name="coroutines core is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.005"/>
   <testcase name="mockito kotlin is available" classname="com.bontecou.syncmd.ProjectSetupTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

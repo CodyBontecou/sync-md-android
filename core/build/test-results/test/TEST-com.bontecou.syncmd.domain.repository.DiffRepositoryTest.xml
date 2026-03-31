@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:40:45.170Z" hostname="CodyBontecoum1.local" time="0.473">
+<testsuite name="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:47:49.527Z" hostname="CodyBontecoum1.local" time="0.489">
   <properties/>
-  <testcase name="getDiff returns empty list for clean repository" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.08"/>
-  <testcase name="diff hunks contain correct line types" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.064"/>
-  <testcase name="stageFile adds file to index" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.063"/>
-  <testcase name="commit only commits staged files, not unstaged" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.062"/>
-  <testcase name="unstageFile removes file from index" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.069"/>
-  <testcase name="getDiff for single file returns only that file's diff" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.067"/>
-  <testcase name="getDiff returns modified files when working tree has changes" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.066"/>
+  <testcase name="getDiff returns empty list for clean repository" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.07"/>
+  <testcase name="diff hunks contain correct line types" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.067"/>
+  <testcase name="stageFile adds file to index" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.071"/>
+  <testcase name="commit only commits staged files, not unstaged" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.069"/>
+  <testcase name="unstageFile removes file from index" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.073"/>
+  <testcase name="getDiff for single file returns only that file's diff" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.07"/>
+  <testcase name="getDiff returns modified files when working tree has changes" classname="com.bontecou.syncmd.domain.repository.DiffRepositoryTest" time="0.069"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
