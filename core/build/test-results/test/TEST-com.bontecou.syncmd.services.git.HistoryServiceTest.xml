@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bontecou.syncmd.services.git.HistoryServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:09:58.083Z" hostname="CodyBontecoum1.local" time="0.797">
+<testsuite name="com.bontecou.syncmd.services.git.HistoryServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-03-31T13:40:49.750Z" hostname="CodyBontecoum1.local" time="0.623">
   <properties/>
-  <testcase name="createTag creates new tag" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.071"/>
-  <testcase name="getHistory returns list of commits" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.07"/>
-  <testcase name="revertCommit reverts a commit" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.07"/>
-  <testcase name="getStashCount returns correct number" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.073"/>
-  <testcase name="stashPop removes stash after applying" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.075"/>
-  <testcase name="listStashes returns all stashes" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.071"/>
-  <testcase name="getCommitCount returns total commits" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.071"/>
-  <testcase name="getLatestCommit returns most recent commit" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.072"/>
-  <testcase name="stash creates a new stash" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.076"/>
-  <testcase name="listTags shows created tags" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.072"/>
-  <testcase name="deleteTag removes tag" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.076"/>
+  <testcase name="createTag creates new tag" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.061"/>
+  <testcase name="getHistory returns list of commits" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.055"/>
+  <testcase name="revertCommit reverts a commit" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.056"/>
+  <testcase name="getStashCount returns correct number" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.057"/>
+  <testcase name="stashPop removes stash after applying" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.055"/>
+  <testcase name="listStashes returns all stashes" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.056"/>
+  <testcase name="getCommitCount returns total commits" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.057"/>
+  <testcase name="getLatestCommit returns most recent commit" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.057"/>
+  <testcase name="stash creates a new stash" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.057"/>
+  <testcase name="listTags shows created tags" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.057"/>
+  <testcase name="deleteTag removes tag" classname="com.bontecou.syncmd.services.git.HistoryServiceTest" time="0.055"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

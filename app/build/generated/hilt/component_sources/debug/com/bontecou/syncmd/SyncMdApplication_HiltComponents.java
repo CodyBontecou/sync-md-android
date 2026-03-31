@@ -2,7 +2,12 @@ package com.bontecou.syncmd;
 
 import com.bontecou.syncmd.di.RepositoryModule;
 import com.bontecou.syncmd.di.ServiceModule;
+import com.bontecou.syncmd.ui.viewmodels.BranchViewModel_HiltModules;
+import com.bontecou.syncmd.ui.viewmodels.ConflictViewModel_HiltModules;
+import com.bontecou.syncmd.ui.viewmodels.DiffViewModel_HiltModules;
+import com.bontecou.syncmd.ui.viewmodels.HistoryViewModel_HiltModules;
 import com.bontecou.syncmd.ui.viewmodels.PullViewModel_HiltModules;
+import com.bontecou.syncmd.ui.viewmodels.SettingsViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -154,8 +159,13 @@ public final class SyncMdApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          BranchViewModel_HiltModules.KeyModule.class,
+          ConflictViewModel_HiltModules.KeyModule.class,
+          DiffViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
+          HistoryViewModel_HiltModules.KeyModule.class,
           PullViewModel_HiltModules.KeyModule.class,
+          SettingsViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class
       }
@@ -193,8 +203,13 @@ public final class SyncMdApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          BranchViewModel_HiltModules.BindsModule.class,
+          ConflictViewModel_HiltModules.BindsModule.class,
+          DiffViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
-          PullViewModel_HiltModules.BindsModule.class
+          HistoryViewModel_HiltModules.BindsModule.class,
+          PullViewModel_HiltModules.BindsModule.class,
+          SettingsViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

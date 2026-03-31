@@ -7,13 +7,39 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import com.bontecou.syncmd.di.RepositoryModule;
+import com.bontecou.syncmd.di.RepositoryModule_ProvideBranchRepositoryFactory;
+import com.bontecou.syncmd.di.RepositoryModule_ProvideConflictRepositoryFactory;
+import com.bontecou.syncmd.di.RepositoryModule_ProvideDiffRepositoryFactory;
+import com.bontecou.syncmd.di.RepositoryModule_ProvideHistoryRepositoryFactory;
 import com.bontecou.syncmd.di.RepositoryModule_ProvidePullRepositoryFactory;
 import com.bontecou.syncmd.di.ServiceModule;
+import com.bontecou.syncmd.di.ServiceModule_ProvideBranchServiceFactory;
+import com.bontecou.syncmd.di.ServiceModule_ProvideConflictServiceFactory;
+import com.bontecou.syncmd.di.ServiceModule_ProvideDiffServiceFactory;
+import com.bontecou.syncmd.di.ServiceModule_ProvideHistoryServiceFactory;
 import com.bontecou.syncmd.di.ServiceModule_ProvidePullServiceFactory;
+import com.bontecou.syncmd.domain.repository.BranchRepository;
+import com.bontecou.syncmd.domain.repository.ConflictRepository;
+import com.bontecou.syncmd.domain.repository.DiffRepository;
+import com.bontecou.syncmd.domain.repository.HistoryRepository;
 import com.bontecou.syncmd.domain.repository.PullRepository;
+import com.bontecou.syncmd.services.git.BranchService;
+import com.bontecou.syncmd.services.git.ConflictService;
+import com.bontecou.syncmd.services.git.DiffService;
+import com.bontecou.syncmd.services.git.HistoryService;
 import com.bontecou.syncmd.services.git.PullService;
+import com.bontecou.syncmd.ui.viewmodels.BranchViewModel;
+import com.bontecou.syncmd.ui.viewmodels.BranchViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.bontecou.syncmd.ui.viewmodels.ConflictViewModel;
+import com.bontecou.syncmd.ui.viewmodels.ConflictViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.bontecou.syncmd.ui.viewmodels.DiffViewModel;
+import com.bontecou.syncmd.ui.viewmodels.DiffViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.bontecou.syncmd.ui.viewmodels.HistoryViewModel;
+import com.bontecou.syncmd.ui.viewmodels.HistoryViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.bontecou.syncmd.ui.viewmodels.PullViewModel;
 import com.bontecou.syncmd.ui.viewmodels.PullViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.bontecou.syncmd.ui.viewmodels.SettingsViewModel;
+import com.bontecou.syncmd.ui.viewmodels.SettingsViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -28,9 +54,12 @@ import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
 import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory;
 import dagger.hilt.android.internal.modules.ApplicationContextModule;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
+import dagger.internal.SetBuilder;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -56,20 +85,14 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
     return new Builder();
   }
 
-  public static SyncMdApplication_HiltComponents.SingletonC create() {
-    return new Builder().build();
-  }
-
   public static final class Builder {
+    private ApplicationContextModule applicationContextModule;
+
     private Builder() {
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
     public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
-      Preconditions.checkNotNull(applicationContextModule);
+      this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
       return this;
     }
 
@@ -102,7 +125,8 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
     }
 
     public SyncMdApplication_HiltComponents.SingletonC build() {
-      return new SingletonCImpl();
+      Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
+      return new SingletonCImpl(applicationContextModule);
     }
   }
 
@@ -391,7 +415,7 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>singleton(PullViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return SetBuilder.<String>newSetBuilder(6).add(BranchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ConflictViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(DiffViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HistoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PullViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SettingsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -417,7 +441,17 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<BranchViewModel> branchViewModelProvider;
+
+    private Provider<ConflictViewModel> conflictViewModelProvider;
+
+    private Provider<DiffViewModel> diffViewModelProvider;
+
+    private Provider<HistoryViewModel> historyViewModelProvider;
+
     private Provider<PullViewModel> pullViewModelProvider;
+
+    private Provider<SettingsViewModel> settingsViewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
@@ -432,12 +466,17 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.pullViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.branchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.conflictViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.diffViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.historyViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.pullViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.settingsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>singletonMap("com.bontecou.syncmd.ui.viewmodels.PullViewModel", ((Provider) pullViewModelProvider));
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.bontecou.syncmd.ui.viewmodels.BranchViewModel", ((Provider) branchViewModelProvider)).put("com.bontecou.syncmd.ui.viewmodels.ConflictViewModel", ((Provider) conflictViewModelProvider)).put("com.bontecou.syncmd.ui.viewmodels.DiffViewModel", ((Provider) diffViewModelProvider)).put("com.bontecou.syncmd.ui.viewmodels.HistoryViewModel", ((Provider) historyViewModelProvider)).put("com.bontecou.syncmd.ui.viewmodels.PullViewModel", ((Provider) pullViewModelProvider)).put("com.bontecou.syncmd.ui.viewmodels.SettingsViewModel", ((Provider) settingsViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -461,8 +500,23 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.bontecou.syncmd.ui.viewmodels.PullViewModel 
+          case 0: // com.bontecou.syncmd.ui.viewmodels.BranchViewModel 
+          return (T) new BranchViewModel(singletonCImpl.provideBranchServiceProvider.get());
+
+          case 1: // com.bontecou.syncmd.ui.viewmodels.ConflictViewModel 
+          return (T) new ConflictViewModel(singletonCImpl.provideConflictServiceProvider.get());
+
+          case 2: // com.bontecou.syncmd.ui.viewmodels.DiffViewModel 
+          return (T) new DiffViewModel(singletonCImpl.provideDiffServiceProvider.get());
+
+          case 3: // com.bontecou.syncmd.ui.viewmodels.HistoryViewModel 
+          return (T) new HistoryViewModel(singletonCImpl.provideHistoryServiceProvider.get());
+
+          case 4: // com.bontecou.syncmd.ui.viewmodels.PullViewModel 
           return (T) new PullViewModel(singletonCImpl.providePullServiceProvider.get());
+
+          case 5: // com.bontecou.syncmd.ui.viewmodels.SettingsViewModel 
+          return (T) new SettingsViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }
@@ -539,22 +593,48 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
   }
 
   private static final class SingletonCImpl extends SyncMdApplication_HiltComponents.SingletonC {
+    private final ApplicationContextModule applicationContextModule;
+
     private final SingletonCImpl singletonCImpl = this;
+
+    private Provider<BranchRepository> provideBranchRepositoryProvider;
+
+    private Provider<BranchService> provideBranchServiceProvider;
+
+    private Provider<ConflictRepository> provideConflictRepositoryProvider;
+
+    private Provider<ConflictService> provideConflictServiceProvider;
+
+    private Provider<DiffRepository> provideDiffRepositoryProvider;
+
+    private Provider<DiffService> provideDiffServiceProvider;
+
+    private Provider<HistoryRepository> provideHistoryRepositoryProvider;
+
+    private Provider<HistoryService> provideHistoryServiceProvider;
 
     private Provider<PullRepository> providePullRepositoryProvider;
 
     private Provider<PullService> providePullServiceProvider;
 
-    private SingletonCImpl() {
-
-      initialize();
+    private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
+      this.applicationContextModule = applicationContextModuleParam;
+      initialize(applicationContextModuleParam);
 
     }
 
     @SuppressWarnings("unchecked")
-    private void initialize() {
-      this.providePullRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<PullRepository>(singletonCImpl, 1));
-      this.providePullServiceProvider = DoubleCheck.provider(new SwitchingProvider<PullService>(singletonCImpl, 0));
+    private void initialize(final ApplicationContextModule applicationContextModuleParam) {
+      this.provideBranchRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<BranchRepository>(singletonCImpl, 1));
+      this.provideBranchServiceProvider = DoubleCheck.provider(new SwitchingProvider<BranchService>(singletonCImpl, 0));
+      this.provideConflictRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<ConflictRepository>(singletonCImpl, 3));
+      this.provideConflictServiceProvider = DoubleCheck.provider(new SwitchingProvider<ConflictService>(singletonCImpl, 2));
+      this.provideDiffRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<DiffRepository>(singletonCImpl, 5));
+      this.provideDiffServiceProvider = DoubleCheck.provider(new SwitchingProvider<DiffService>(singletonCImpl, 4));
+      this.provideHistoryRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<HistoryRepository>(singletonCImpl, 7));
+      this.provideHistoryServiceProvider = DoubleCheck.provider(new SwitchingProvider<HistoryService>(singletonCImpl, 6));
+      this.providePullRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<PullRepository>(singletonCImpl, 9));
+      this.providePullServiceProvider = DoubleCheck.provider(new SwitchingProvider<PullService>(singletonCImpl, 8));
     }
 
     @Override
@@ -590,10 +670,34 @@ public final class DaggerSyncMdApplication_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.bontecou.syncmd.services.git.PullService 
+          case 0: // com.bontecou.syncmd.services.git.BranchService 
+          return (T) ServiceModule_ProvideBranchServiceFactory.provideBranchService(singletonCImpl.provideBranchRepositoryProvider.get());
+
+          case 1: // com.bontecou.syncmd.domain.repository.BranchRepository 
+          return (T) RepositoryModule_ProvideBranchRepositoryFactory.provideBranchRepository();
+
+          case 2: // com.bontecou.syncmd.services.git.ConflictService 
+          return (T) ServiceModule_ProvideConflictServiceFactory.provideConflictService(singletonCImpl.provideConflictRepositoryProvider.get());
+
+          case 3: // com.bontecou.syncmd.domain.repository.ConflictRepository 
+          return (T) RepositoryModule_ProvideConflictRepositoryFactory.provideConflictRepository();
+
+          case 4: // com.bontecou.syncmd.services.git.DiffService 
+          return (T) ServiceModule_ProvideDiffServiceFactory.provideDiffService(singletonCImpl.provideDiffRepositoryProvider.get());
+
+          case 5: // com.bontecou.syncmd.domain.repository.DiffRepository 
+          return (T) RepositoryModule_ProvideDiffRepositoryFactory.provideDiffRepository();
+
+          case 6: // com.bontecou.syncmd.services.git.HistoryService 
+          return (T) ServiceModule_ProvideHistoryServiceFactory.provideHistoryService(singletonCImpl.provideHistoryRepositoryProvider.get());
+
+          case 7: // com.bontecou.syncmd.domain.repository.HistoryRepository 
+          return (T) RepositoryModule_ProvideHistoryRepositoryFactory.provideHistoryRepository();
+
+          case 8: // com.bontecou.syncmd.services.git.PullService 
           return (T) ServiceModule_ProvidePullServiceFactory.providePullService(singletonCImpl.providePullRepositoryProvider.get());
 
-          case 1: // com.bontecou.syncmd.domain.repository.PullRepository 
+          case 9: // com.bontecou.syncmd.domain.repository.PullRepository 
           return (T) RepositoryModule_ProvidePullRepositoryFactory.providePullRepository();
 
           default: throw new AssertionError(id);

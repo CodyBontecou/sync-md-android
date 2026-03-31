@@ -58,6 +58,7 @@ com.bontecou.syncmd.app-drawerlayout-1.1.1-56 /Users/codybontecou/.gradle/caches
 com.bontecou.syncmd.app-resValues-57 /Users/codybontecou/dev/sync-md-android/app/build/generated/res/resValues/release
 com.bontecou.syncmd.app-packageReleaseResources-58 /Users/codybontecou/dev/sync-md-android/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
 com.bontecou.syncmd.app-packageReleaseResources-59 /Users/codybontecou/dev/sync-md-android/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
-com.bontecou.syncmd.app-merged_res-60 /Users/codybontecou/dev/sync-md-android/app/build/intermediates/merged_res/release
-com.bontecou.syncmd.app-main-61 /Users/codybontecou/dev/sync-md-android/app/src/main/res
-com.bontecou.syncmd.app-release-62 /Users/codybontecou/dev/sync-md-android/app/src/release/res
+com.bontecou.syncmd.app-merged-not-compiled-resources-60 /Users/codybontecou/dev/sync-md-android/app/build/intermediates/merged-not-compiled-resources/release
+com.bontecou.syncmd.app-merged_res-61 /Users/codybontecou/dev/sync-md-android/app/build/intermediates/merged_res/release
+com.bontecou.syncmd.app-main-62 /Users/codybontecou/dev/sync-md-android/app/src/main/res
+com.bontecou.syncmd.app-release-63 /Users/codybontecou/dev/sync-md-android/app/src/release/res
