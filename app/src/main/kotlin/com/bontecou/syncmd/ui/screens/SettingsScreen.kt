@@ -32,7 +32,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.bontecou.syncmd.ui.theme.BBadge
 import com.bontecou.syncmd.ui.theme.BBadgeStyle
 import com.bontecou.syncmd.ui.theme.BCard
@@ -52,10 +51,10 @@ import com.bontecou.syncmd.ui.viewmodels.SettingsViewModel
 
 @Composable
 fun SettingsScreen(
+    viewModel: SettingsViewModel,
     onNavigateBack: () -> Unit = {},
     onNavigateToLogin: () -> Unit = {},
     onNavigateToRepoPicker: () -> Unit = {},
-    viewModel: SettingsViewModel = hiltViewModel(),
     githubViewModel: GitHubViewModel = hiltViewModel(),
 ) {
     val bc = LocalBrutalColors.current
