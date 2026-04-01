@@ -47,6 +47,7 @@ fun AppShell() {
     val githubViewModel   : GitHubViewModel   = hiltViewModel()
 
     val selectedRepository by settingsViewModel.selectedRepository.collectAsState()
+    val appSettings        by settingsViewModel.appSettings.collectAsState()
     val isLoggedIn         by githubViewModel.isLoggedIn.collectAsState()
     val bc                 = LocalBrutalColors.current
 
@@ -100,6 +101,7 @@ fun AppShell() {
             composable(Routes.VAULT) {
                 VaultScreen(
                     repositoryPath  = selectedRepository,
+                    showDebugInfo   = appSettings.showDebugInfo,
                     onOpenGit       = { navController.navigate(Routes.GIT) },
                     onNavigateBack  = { navController.popBackStack() },
                 )
@@ -109,6 +111,7 @@ fun AppShell() {
             composable(Routes.GIT) {
                 GitScreen(
                     repositoryPath = selectedRepository,
+                    showDebugInfo  = appSettings.showDebugInfo,
                     onNavigateBack = { navController.popBackStack() },
                 )
             }
