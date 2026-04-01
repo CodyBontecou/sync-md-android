@@ -12,7 +12,6 @@ import androidx.compose.runtime.getValue
 import com.bontecou.syncmd.services.github.GitHubAuthManager
 import com.bontecou.syncmd.ui.AppShell
 import com.bontecou.syncmd.ui.theme.SyncMdTheme
-import com.bontecou.syncmd.ui.viewmodels.GitHubViewModel
 import com.bontecou.syncmd.ui.viewmodels.SettingsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

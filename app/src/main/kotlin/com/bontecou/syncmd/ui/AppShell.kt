@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -47,6 +48,7 @@ fun AppShell(settingsViewModel: SettingsViewModel) {
     val context           = LocalContext.current
 
     val selectedRepository by settingsViewModel.selectedRepository.collectAsState()
+    val appSettings        by settingsViewModel.appSettings.collectAsState()
     val isLoggedIn         by githubViewModel.isLoggedIn.collectAsState()
     val bc                 = LocalBrutalColors.current
 
@@ -106,6 +108,7 @@ fun AppShell(settingsViewModel: SettingsViewModel) {
             composable(Routes.VAULT) {
                 VaultScreen(
                     repositoryPath  = selectedRepository,
+                    showDebugInfo   = appSettings.showDebugInfo,
                     onOpenGit       = { navController.navigate(Routes.GIT) },
                     onNavigateBack  = { navController.popBackStack() },
                 )
@@ -115,6 +118,7 @@ fun AppShell(settingsViewModel: SettingsViewModel) {
             composable(Routes.GIT) {
                 GitScreen(
                     repositoryPath = selectedRepository,
+                    showDebugInfo  = appSettings.showDebugInfo,
                     onNavigateBack = { navController.popBackStack() },
                 )
             }
